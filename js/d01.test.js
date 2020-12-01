@@ -25,8 +25,8 @@ describe("part 1", () => {
     test("bruteForcePair", () => {
       const expected = [1069, 951]
       const list = fs.readFileSync('./d01.input.txt', 'utf8')
-      .split("\n")
-      .map(i => Number(i))
+        .split("\n")
+        .map(i => Number(i))
       const actual = bruteForcePair(list).sort()
 
       expect(actual).toEqual(expected)
@@ -45,9 +45,21 @@ describe("part 2", () => {
       1456,
     ]
 
-    test("bruteForceTriplet", () => {
-      const expected = [979, 366, 675]
-      const actual = triplet([...simpleInput])
+    test("triplet", () => {
+      const expected = [979, 675, 366].sort()
+      const actual = triplet([...simpleInput]).sort()
+      expect(actual).toEqual(expected)
+    })
+  })
+
+  describe('puzzle input', () => {
+    test("triplet", () => {
+      const expected = [1142, 405, 473].sort()
+      const list = fs.readFileSync('./d01.input.txt', 'utf8')
+        .split("\n")
+        .map(i => Number(i))
+
+      const actual = triplet(list).sort()
       expect(actual).toEqual(expected)
     })
   })
