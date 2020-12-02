@@ -24,7 +24,7 @@ describe("part 1", () => {
   describe("puzzle input", () => {
     test("bruteForcePair", () => {
       const expected = [1069, 951]
-      const list = fs.readFileSync('./d01.input.txt', 'utf8')
+      const list = fs.readFileSync('./d01/d01.input.txt', 'utf8')
         .split("\n")
         .map(i => Number(i))
       const actual = bruteForcePair(list).sort()
@@ -55,7 +55,7 @@ describe("part 2", () => {
   describe('puzzle input', () => {
     test("triplet", () => {
       const expected = [1142, 405, 473].sort()
-      const list = fs.readFileSync('./d01.input.txt', 'utf8')
+      const list = fs.readFileSync('./d01/d01.input.txt', 'utf8')
         .split("\n")
         .map(i => Number(i))
 
